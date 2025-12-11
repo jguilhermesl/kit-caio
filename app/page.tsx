@@ -259,28 +259,28 @@ export default function BRFKitSystem() {
           <TableRow>
             <TableHead className="min-w-[60px]">ID</TableHead>
             <TableHead className="min-w-[120px]">Nome</TableHead>
-            <TableHead className="min-w-[100px] hidden sm:table-cell">
+            <TableHead className="min-w-[100px]">
               Setor
             </TableHead>
-            <TableHead className="min-w-[80px] hidden sm:table-cell">
+            <TableHead className="min-w-[60px]">
               Kits
             </TableHead>
-            <TableHead className="min-w-[80px] hidden sm:table-cell">
+            <TableHead className="min-w-[70px]">
               Kit Natalino
             </TableHead>
             <TableHead className="min-w-[80px]">Status</TableHead>
             {!showActions && (
-              <TableHead className="min-w-[100px] hidden md:table-cell">
+              <TableHead className="min-w-[100px]">
                 Data
               </TableHead>
             )}
             {!showActions && (
-              <TableHead className="min-w-[120px] hidden lg:table-cell">
+              <TableHead className="min-w-[120px]">
                 Retirado Por
               </TableHead>
             )}
             {showActions && (
-              <TableHead className="min-w-[120px]">Ações</TableHead>
+              <TableHead className="min-w-[100px]">Ações</TableHead>
             )}
           </TableRow>
         </TableHeader>
@@ -301,27 +301,16 @@ export default function BRFKitSystem() {
                 </div>
               </TableCell>
               <TableCell className="text-xs sm:text-sm">
-                <div>
-                  <div className="font-medium">{employee.nome}</div>
-                  <div className="text-xs text-muted-foreground sm:hidden">
-                    {employee.setor}
-                  </div>
-                </div>
+                <div className="font-medium">{employee.nome}</div>
               </TableCell>
-              <TableCell className="hidden sm:table-cell text-xs sm:text-sm">
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="truncate">{employee.setor}</span>
-                </div>
+              <TableCell className="text-xs sm:text-sm">
+                <span className="truncate">{employee.setor}</span>
               </TableCell>
-              <TableCell className="hidden sm:table-cell text-xs sm:text-sm">
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="truncate">{employee.kits}</span>
-                </div>
+              <TableCell className="text-xs sm:text-sm text-center">
+                <span>{employee.kits}</span>
               </TableCell>
-              <TableCell className="hidden sm:table-cell text-xs sm:text-sm">
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="truncate">{employee.kitNatalino}</span>
-                </div>
+              <TableCell className="text-xs sm:text-sm text-center">
+                <span>{employee.kitNatalino}</span>
               </TableCell>
               <TableCell>
                 <Badge
