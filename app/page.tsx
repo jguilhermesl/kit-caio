@@ -335,12 +335,12 @@ export default function BRFKitSystem() {
                 </Badge>
               </TableCell>
               {!showActions && (
-                <TableCell className="hidden md:table-cell text-xs">
+                <TableCell className="text-xs">
                   {employee.dataEntrega}
                 </TableCell>
               )}
               {!showActions && (
-                <TableCell className="hidden lg:table-cell text-xs">
+                <TableCell className="text-xs">
                   {employee.retiradoPor}
                 </TableCell>
               )}
